@@ -8,35 +8,7 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 
 
 
-- MySQL Database Configuration
 
-- Docker Images
-
-- Kubernetes architecture configuration
-
-- AWS EC2 Service
-
-- AWS Security Group Configuration
-
-- Git & Github for Version Control System
-
-- AWS Cloudformation Service
-
-### At the end of the project, students will be able to;
-
-- configure a connection to the `MySQL` database.
-
-- build Docker images.
-
-- configure Kubernetes to run Python Flask app.
-
-- improve network skills using `service` objects in Kubernetes
-
-- configure AWS EC2 Instance and Security Groups.
-
-- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
-
-- run the web application on AWS EC2 instance using the GitHub repo as codebase.
 
 - build a Kubernetes infrastructure using Cloudformation.
 
