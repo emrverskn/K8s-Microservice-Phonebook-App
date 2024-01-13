@@ -9,39 +9,6 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 
 
 
-
-
-
-- Software Developers in your team have already developed first version of `Phonebook` application. They have designed a database to keep phonebook records with following fields.
-
-  - id: unique identifier for records, data type is integer and it will be auto increment.
-
-  - name: name of record, data type is string.
-
-  - number: phone number belonging to the recorded person.
-
-- Your teammates also created the RESTful web service as given in [Phonebook API](./Phonebook-api.py) using Python Flask Framework. Below table shows how the HTTP methods are designed to affect the given resources identified by URIs.
-
-| HTTP Method  | Action | Example|
-| --- | --- | --- |
-| `GET`     |   Read the records | http://[ec2-hostname]:30001/  |
-| `POST`    |   Create a new record | http://[ec2-hostname]:30001/add  |
-| `POST`    |   Update an existing record | http://[ec2-hostname]:30001/update  |
-| `POST`    |   Delete an existing record | http://[ec2-hostname]:30001/delete  |
-| `POST`    |   Delete a resource | http://[ec2-hostname]:30002  |
-
-- As a cloud engineer, you're requested to deploy the app on an AWS EC2 Instance using Docker and Kubernetes to showcase your project. In order to achieve this goal, you need to;
-
-  - Pull the application code from GitHub repo of your team.
-
-  - Create two docker images for create/update/delete and search pages using `Dockerfile`s.
-
-  - Deploy the app using `Kubernetes`. To do so;
-
-    - Create a database service using MySQL.
-
-    - Use a custom network for the services.
-
 - In the Kubernetes environment, you will configure three deployements with their services and a persistent volume for MySQL deployments. You can find the definitions below for the objects you should create:
 
   1.1. CREATE/DELETE/UPDATE DEPLOYMENT
