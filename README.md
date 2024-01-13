@@ -10,34 +10,7 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 
 
 
-- build a Kubernetes infrastructure using Cloudformation.
 
-## Steps to Solution
-  
-- Step 1: Download or clone project definition from `clarusway` repo on Github
-
-- Step 2: Create your Kubernetes environment with cloudformation template
-
-- Step 3: Prepare Dockerfiles for search and delete/update/create pages using Python Flask Apps, create images and push to your Docker Hub Repository.
-
-- Step 4: Prepare search, delete/update/create and mysql parts.
-
-- Step 5: Deploy your work on Kubernetes to showcase your application within your team.
-
-
-## Resources
-
-- [Kubernetes Documentations](https://kubernetes.io/docs/home/)
-
-## Description
-
-Phonebook Microservice Web Application aims to create a web application with MySQL Database using Docker and Kubernetes to give students the understanding of Microservice architecture. In this application, we have a frontend service and a backend service to interact with database service. Each service will be managed by a Kubernetes deployment. The backend service will be a gateway for the application and it will serve the necessary web pages for create, delete and update operations while the frontend service will serve a search page in order to conduct read operations. To preserve the data in the database, persistent volume and persistent volume claim concepts should be adopted.
-
-## Problem Statement
-
-![Project_206](Microservice_structure.png) 
-
-- Your team has started working on a project to create a `Phonebook` Application as Web Service.  
 
 - Software Developers in your team have already developed first version of `Phonebook` application. They have designed a database to keep phonebook records with following fields.
 
