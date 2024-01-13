@@ -8,38 +8,6 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 
 
 
-
-- In the Kubernetes environment, you will configure three deployements with their services and a persistent volume for MySQL deployments. You can find the definitions below for the objects you should create:
-
-  1.1. CREATE/DELETE/UPDATE DEPLOYMENT
-
-    - Deployment definition file should configure create/delete/update operations with one or more replicas.
-    - Expose the container port on `port 80`.
-    - Deployment definition file should set the proper Environmental Variables for the db connection.
-    - Passwords should be protected by kubernetes-secrets.
-    - Database Host's value should be defined in the deployment using Kubernetes-ConfigMap.
-
-  1.2. CREATE/DELETE/UPDATE SERVICE
-    - This service should be attached to `CREATE/DELETE/UPDATE Deployment`.
-    - Service type should be NodePort published on `port:30001`.
-    - Expose the port and target port on port `80`.
-
-  2.1. SEARCH DEPLOYMENT
-
-    - Deployment definition file should configure search operations with one or more replicas.
-    - Expose the container port on `port 80`.
-    - Deployment definition file should set the proper Environmental Variables for the db connection.
-    - Passwords should be protected by kubernetes-secrets.
-    - Database Host's value should be defined in the deployment using Kubernetes-ConfigMap.
-
-  2.2. SEARCH SERVICE
-    - This service should be attached to `SEARCH Deployment`.
-    - Service type should be NodePort published on `port:30002`.
-    - Expose the port and target port on port `80`.
-
-  3.1. DATABASE DEPLOYMENT
-    - Deployment should use mysql:5.7 image pulled from Docker hub.
-    - Expose the container port on `port 3306`.
     - Deployment definition file should set the proper Environmental Variables.
     - Persistent volume should be attached to this deployment.
     - Passwords should be protected by kubernetes-secrets.
