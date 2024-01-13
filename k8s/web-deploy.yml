@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment
+  name: webserver-deployment
 spec:
   replicas: 3
   selector:
@@ -12,20 +12,21 @@ spec:
       labels:
         app: webserver
     spec:
-      containers: 
-      - image: emrverskn/webserver
-        name: webservercontainer
+      containers:
+      - name: webserver-container
+        image: emrverskn/webserver:latest
         envFrom:
         - secretRef:
-            name: mysql-secret
-        ports: 
+            name: mysecret
+        ports:
         - containerPort: 80
-            
+
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: result-deployment
+  name: resultserver-deployment
 spec:
   replicas: 3
   selector:
@@ -36,11 +37,11 @@ spec:
       labels:
         app: resultserver
     spec:
-      containers: 
-      - image: emrverskn/webserver
-        name: resultservercontainer
+      containers:
+      - name: resultserver-container
+        image: emrverskn/resultserver:latest
         envFrom:
         - secretRef:
-            name: mysql-secret
-        ports: 
+            name: mysecret
+        ports:
         - containerPort: 80

@@ -1,30 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-deployment
+  name: mysql-deploy
 spec:
   selector:
     matchLabels:
-      app: mysql-deploy
+      app: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql-deploy
+        app: mysql
     spec:
       containers:
-      - name: mysql
-        image: mysql:5.7
+      - image: mysql:5.7
+        name: mysql
+        imagePullPolicy: Always
         envFrom:
         - secretRef:
-            name: mysql-secret
+            name: mysecret
         ports:
         - containerPort: 3306
+          name: mysql
         volumeMounts:
-          - mountPath: /var/lib/mysql
-            name: mysqlvolume
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
       volumes:
-        - persistentVolumeClaim:
-            claimName: mysql-pv-claim
-          name: mysqlvolume
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
