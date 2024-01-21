@@ -26,7 +26,6 @@ def find_persons(keyword):
     return persons
 
 
-
 @app.route('/', methods=['GET', 'POST'])
 def find_records():
     if request.method == 'POST':
