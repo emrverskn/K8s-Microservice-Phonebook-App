@@ -45,7 +45,7 @@ def insert_person(name, number):
     result = cursor.fetchall()
     return f'Person {name.strip().title()} added to Phonebook successfully'
 
-# Write a function named `update_person` 
+
 # and returns text info about result of the operation
 def update_person(name, number):
     query = f"""
