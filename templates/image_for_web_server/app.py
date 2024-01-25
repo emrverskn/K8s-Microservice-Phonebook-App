@@ -17,7 +17,6 @@ connection.autocommit(True)
 cursor = connection.cursor()
 
 
-
 def init_phonebook_db():
     phonebook_table = """
     CREATE TABLE IF NOT EXISTS """+ project_db +""".phonebook(
