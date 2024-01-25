@@ -28,7 +28,7 @@ def init_phonebook_db():
     """
     cursor.execute(phonebook_table)
 
-# Write a function named `insert_person` 
+ 
 # and returns text info about result of the operation
 def insert_person(name, number):
     query = f"""
