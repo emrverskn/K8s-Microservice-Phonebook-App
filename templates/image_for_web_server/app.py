@@ -28,7 +28,6 @@ def init_phonebook_db():
     """
     cursor.execute(phonebook_table)
 
- 
 def insert_person(name, number):
     query = f"""
     SELECT * FROM phonebook WHERE name like '{name.strip().lower()}';
