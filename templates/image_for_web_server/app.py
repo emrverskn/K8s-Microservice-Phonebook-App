@@ -80,7 +80,6 @@ def delete_person(name):
     return f'Phone record of {name.strip().title()} is deleted from the phonebook successfully'
 
 
-
 # using template files named `add-update.html` given under `templates` folder
 # and assign to the static route of ('add')
 @app.route('/add', methods=['GET', 'POST'])
