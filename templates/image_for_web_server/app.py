@@ -63,7 +63,6 @@ def update_person(name, number):
 
     return f'Phone record of {name.strip().title()} is updated successfully'
 
-
 def delete_person(name):
     query = f"""
     SELECT * FROM phonebook WHERE name like '{name.strip().lower()}';
