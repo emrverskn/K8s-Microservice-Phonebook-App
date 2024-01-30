@@ -80,7 +80,7 @@ def delete_person(name):
     return f'Phone record of {name.strip().title()} is deleted from the phonebook successfully'
 
 
-# and assign to the static route of ('add')
+# and assign to th
 @app.route('/add', methods=['GET', 'POST'])
 def add_record():
     if request.method == 'POST':
