@@ -135,7 +135,7 @@ def delete_record():
 def find_records():
     return render_template('index.html', show_result=False, developer_name='Merve')
 
-# Add a statement to run the Flask application  
+ 
 if __name__== '__main__':
     init_phonebook_db()
     #app.run(debug=True)
