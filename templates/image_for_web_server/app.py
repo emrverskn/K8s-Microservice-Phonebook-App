@@ -99,7 +99,8 @@ def add_record():
         return render_template('add-update.html', show_result=False, not_valid=False, action_name='save', developer_name='Merve')
 
  
- 
+
+
 
 @app.route('/update', methods=['GET', 'POST'])
 def update_record():
