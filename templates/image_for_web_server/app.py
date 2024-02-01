@@ -101,7 +101,6 @@ def add_record():
  
 
 
-
 @app.route('/update', methods=['GET', 'POST'])
 def update_record():
     if request.method == 'POST':
