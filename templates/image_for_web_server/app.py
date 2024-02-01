@@ -119,7 +119,6 @@ def update_record():
     else:
         return render_template('add-update.html', show_result=False, not_valid=False, action_name='update', developer_name='Merve')
 
-
 # using template files named `delete.html` given under `templates` folder
 # and assign to the static route of ('delete')
 @app.route('/delete', methods=['GET', 'POST'])
